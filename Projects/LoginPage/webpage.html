@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="soul.js"></script>
+</head>
+
+<body>
+    <h2>Login Page</h2><br>
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(event, 'login-tab')">Login</button>
+        <button class="tab-btn" onclick="openTab(event, 'forgot-tab')">Forgot Password</button>
+        <!-- Add the "Sign Up" button -->
+        <button class="tab-btn" onclick="openTab(event, 'signup-tab')">Sign Up</button>
+    </div>
+
+    <div id="login-tab" class="login-tab tab-content">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateLoginForm()">
+            <label for="Uname"><b>Username:</b></label>
+            <input type="text" name="Uname" id="Uname" placeholder="Enter your username" required>
+            <br><br>
+            <label for="Pass"><b>Password:</b></label>
+            <input type="password" name="Pass" id="Pass" placeholder="Enter your password" required>
+            <br><br>
+            <input type="submit" name="loginBtn" id="loginBtn" value="Login">
+        </form>
+    </div>
+
+    <div id="forgot-tab" class="forgot-tab tab-content" style="display: none;">
+        <h2>Forgot Password</h2>
+        <form id="forgotForm" onsubmit="return forgotPassword()">
+            <label for="ForgotUname"><b>Username:</b></label>
+            <input type="text" name="ForgotUname" id="ForgotUname" placeholder="Enter your username" required>
+            <br><br>
+            <input type="submit" name="forgotSubmitBtn" id="forgotSubmitBtn" value="Submit">
+        </form>
+    </div>
+
+    <!-- Add the "Sign Up" tab -->
+    <div id="signup-tab" class="signup-tab tab-content" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signupForm" onsubmit="return validateSignUpForm()">
+            <label for="SignUpUname"><b>Enter Your New User Name:</b></label>
+            <input type="text" name="SignUpUname" id="SignUpUname" placeholder="New Username" required>
+            <span id="availabilityStatus"></span>
+            <br><br>
+            <label for="SignUpEmail"><b>Enter Your Email:</b></label>
+            <input type="email" name="SignUpEmail" id="SignUpEmail" placeholder="Email Address" required>
+            <span id="emailAvailabilityStatus"></span>
+            <br><br>
+            <label for="SignUpPass"><b>Enter Your New Password:</b></label>
+            <input type="password" name="SignUpPass" id="SignUpPass" placeholder="New Password" required>
+            <span id="passwordStrength"></span>
+            <br><br>
+            <label for="SignUpConfirmPass"><b>Confirm Your Password:</b></label>
+            <input type="password" name="SignUpConfirmPass" id="SignUpConfirmPass" placeholder="Confirm Password" required>
+            <span id="passwordMatchStatus"></span>
+            <br><br>
+            <label for="termsAndConditions"><input type="checkbox" name="termsAndConditions" id="termsAndConditions" required> I agree to the Terms and Conditions</label>
+            <br><br>
+            <input type="submit" name="signUpBtn" id="signUpBtn" value="Sign Up">
+        </form>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image to ASCII</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <h1>Image to ASCII</h1>
+    <form action="/convert" method="post" enctype="multipart/form-data" class="converter-container">
+        <input type="file" name="image" accept=".png, .jpg, .jpeg, .gif" onchange="previewImage(event)" />
+        <br /><br>
+        <label for="color-support">Color Support:</label>
+        <input type="checkbox" id="color-support" name="color_support" value="true" />
+
+        <label for="invert-colors">Invert Colors:</label>
+        <input type="checkbox" id="invert-colors" name="invert_colors" value="true" />
+        <br /><br>
+        <input type="submit" value="Convert" class="upload-btn" />
+    </form>
+    <div id="image-preview">
+    </div>
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    const imagePreview = document.getElementById('image-preview');
+                    imagePreview.innerHTML = `<img src="${reader.result}" alt="Preview" class="preview-image" /><h3>Image Preview</h3>`;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+
+</html>

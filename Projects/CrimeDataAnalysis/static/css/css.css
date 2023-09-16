@@ -1,0 +1,27 @@
+/* Reset some default styles for better consistency */
+
+html,
+body,
+#map {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Set the map container height to fill the viewport */
+
+#map {
+    height: 100vh;
+}
+
+
+/* Style the heading */
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+}
+
+
+/* Add any additional styles for your map markers, popups, etc. here */

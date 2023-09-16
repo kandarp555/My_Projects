@@ -1,0 +1,113 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#preview-image {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+#preview-btn {
+    padding: 4px 15px;
+    background-color: #00264e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#preview-btn:hover {
+    background-color: #0056b3;
+}
+
+#preview-btn:focus {
+    outline: none;
+}
+
+.converter-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 90px;
+    text-align: center;
+}
+
+.converter-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.go-back-btn,
+.save-btn,
+.upload-btn {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0px;
+}
+
+#ascii-art-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Styles for the ASCII art */
+
+#ascii-art {
+    font-family: monospace;
+    font-size: 8px;
+    line-height: 0.60;
+}
+
+
+/* Styles for the Save and Go Back buttons */
+
+#back-btn,
+#save-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#save-btn {
+    background-color: #ff7043;
+}
+
+#back-btn:hover,
+#save-btn:hover,
+.upload-btn:hover {
+    background-color: #0056b3;
+}
+
+#back-btn:focus,
+#save-btn:focus,
+.upload-btn:focus {
+    outline: none;
+}

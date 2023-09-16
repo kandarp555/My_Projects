@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image to ASCII</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js.js"></script>
+</head>
+
+<body>
+    <h1>Image to ASCII</h1>
+    <form id="converter-form" enctype="multipart/form-data" class="converter-container">
+        <input type="file" id="image-input" accept=".png, .jpg, .jpeg, .gif" />
+        <br /><br>
+        <label for="color-support">Color Support:</label>
+        <input type="checkbox" id="color-support" name="color_support" value="true" />
+
+        <label for="invert-colors">Invert Colors:</label>
+        <input type="checkbox" id="invert-colors" name="invert_colors" value="true" />
+        <br /><br>
+        <input type="button" value="Convert" class="upload-btn" onclick="convertImageToAscii()" />
+    </form>
+    <div id="image-preview">
+        <button id="preview-btn" onclick="previewImage()">Preview Image</button>
+        <img id="preview-image" />
+    </div>
+</body>
+
+</html>

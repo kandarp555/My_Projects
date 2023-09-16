@@ -1,0 +1,184 @@
+body {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #08ffd1;
+    color: #222;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-btn.active {
+    background-color: #06ccbb;
+}
+
+.tab-content {
+    display: none;
+    background-color: #f3f3f3;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 5px 5px;
+}
+
+#login-tab.active,
+#forgot-tab.active,
+#signup-tab.active {
+    display: block;
+}
+
+label {
+    color: #333;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 35%;
+    height: 35px;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #00ffff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    max-width: 180px;
+    height: 35px;
+    border: none;
+    border-radius: 17px;
+    background-color: #2e3f3c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block;
+}
+
+input[type="submit"]:hover {
+    background-color: #000000;
+}
+
+.remember-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#check {
+    margin-right: 5px;
+}
+
+.remember-me {
+    color: #333;
+    font-size: 16px;
+}
+
+#forgotSubmitBtn {
+    width: 100%;
+    max-width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 17px;
+    background-color: #2e3f3c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block;
+}
+
+#forgotSubmitBtn:hover {
+    background-color: #24a98c;
+}
+
+#signUpBtn {
+    width: 100%;
+    max-width: 180px;
+    height: 35px;
+    border: none;
+    border-radius: 17px;
+    background-color: #2e3f3c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block;
+}
+
+#signUpBtn:hover {
+    background-color: #000000;
+}
+
+.signup-tab input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

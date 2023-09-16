@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image to ASCII Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Converted ASCII Art</h1>
+    <h3 style="color: red;">{{ message }}</h3>
+    <h3>{{error}}</h3>
+    <form action="/save" method="post">
+        <pre class="ascii-art-container">{{ ascii_art }}</pre>
+        <input type="hidden" name="ascii_art" value="{{ ascii_art }}">
+        <input type="submit" value="Save" class="save-btn">
+    </form>
+</body>
+
+</html>

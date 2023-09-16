@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 5px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.preview-image {
+    max-width: 400px;
+    margin: 10px auto;
+    display: block;
+}
+
+.save-btn {
+    max-width: 90px;
+}
+
+
+/* Add styles for the ASCII art container */
+
+.ascii-art-container {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 20px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+    font-size: 8px;
+    line-height: 0.75;
+}
